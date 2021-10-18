@@ -7,8 +7,11 @@ const Services = () => {
   useEffect(() => {
     fetch("services.json")
       .then((res) => res.json())
-      .then((data) => setServices(data));
+      .then((data) => console.log(data));
   }, []);
+//   const serviceHandler = (props) => {
+//     console.log(props)
+// }
   return (
     <div className = 'container'>
     {/* <h1>{services.length}</h1>
@@ -22,6 +25,7 @@ const Services = () => {
         {services.map((service) => (
           <Service 
           key = {service.id}
+          // serviceHandler = {serviceHandler}
           service={service}>
           </Service>
         ))}

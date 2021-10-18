@@ -1,9 +1,12 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
-const Service = ({ service }) => {
-    const { img, name, discription } = service;
-  console.log(service.id);
+const Service = (props) => {
+  // console.log(props)
+  const {service, serviceHandler } = props
+    const { img, name, discription, id } = service;
+  // console.log(service.id);
   return (
     <div>
       {Array.from({ length: 1 }).map((_, idx) => (
@@ -15,7 +18,13 @@ const Service = ({ service }) => {
               <Card.Text>
                {service.discription}
               </Card.Text>
-              <button className = 'btn btn-danger'>Add to cart</button>
+              
+              <Link to = {`/details/${id}`}>
+              <button  className = 'btn btn-danger'>Add to cart</button>
+              </Link> 
+             
+              {/* <button onClick = {() => serviceHandler(service)} className = 'btn btn-danger'>Add to cart</button> 
+              */}
             </Card.Body>
           </Card>
         </Col>
