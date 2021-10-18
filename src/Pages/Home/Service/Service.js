@@ -19,7 +19,7 @@ const Service = (props) => {
                {service.discription}
               </Card.Text>
               
-              <Link to = {`/details/${id}`}>
+              <Link to = {`details/${id}`}>
               <button  className = 'btn btn-danger'>Add to cart</button>
               </Link> 
              

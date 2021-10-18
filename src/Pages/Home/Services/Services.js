@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from "react";
 import { Row } from "react-bootstrap";
+import useService from "../../../Hooks/useService";
 import Service from "../Service/Service";
 
 const Services = () => {
-  const [services, setServices] = useState([]);
-  useEffect(() => {
-    fetch("services.json")
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }, []);
+  // const [services, setServices] = useState([]);
+  const [services] = useService();
+  // useEffect(() => {
+  //   fetch("./services.json")
+  //     .then((res) => res.json())
+  //     .then((data) => setServices(data));
+  // }, []);
+  
 //   const serviceHandler = (props) => {
 //     console.log(props)
 // }

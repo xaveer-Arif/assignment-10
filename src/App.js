@@ -7,7 +7,8 @@ import Service from "./Pages/Home/Service/Service";
 import Login from "./Pages/Login/Login";
 import Header from "./Pages/Shared/Header/Header";
 import AuthProvider from "./Context/AuthProvider";
-import Details from "./Pages/Details/Details";
+import ServiceDetails from "./Pages/Home/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./Pages/PrivateRouter/PrivateRouter";
 
 function App() {
   return (
@@ -22,9 +23,10 @@ function App() {
           <Route path = '/home'> 
             <Home></Home>
           </Route>
-          <Route path = '/details/:serviceId'> 
-            <Details></Details>
-          </Route>
+          <PrivateRoute path = '/details/:serviceId'> 
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+          
 
           <Route path = '/login'> 
             <Login></Login>
