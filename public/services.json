@@ -1,0 +1,66 @@
+[
+    {
+        "id" : "1",
+        "name": "breast care",
+        "discription": "While we are seeing younger women with breast cancer, it isn’t because of a greater incidence of the disease. It is because of a greater awareness, and lack of stigma.",
+        "img": "https://www.gppconline.com/images/group_of_women.jpg"
+    
+    },
+    {
+        "id" : "2",
+        "name": "cancer care",
+        "discription": "Few things are scarier than hearing the word, “Cancer.” During this difficult time, it’s comforting to have the area’s top medical team of your side.",
+        "img": "https://www.gppconline.com/images/oncology.jpg"
+    
+    },
+    {
+        "id" : "3",
+        "name": "cardiology",
+        "discription": "The heart is a complex organ. But when it comes to choosing the right cardiologist, we like to think we’ve made the choice simple thanks to our world-class specialists.",
+        "img": "https://www.gppconline.com/images/cardiology.jpg"
+    
+    },
+    {
+        "id" : "4",
+        "name": "cardiothoracic surgery        ",
+        "discription": "Surgery is never an ideal situation, especially when it comes to conditions of your lungs and heart. Our experienced cardiothoracic surgeons understand",
+        "img": "https://www.gppconline.com/images/cardiothoracicSurgery.jpg"
+    
+    },
+    {
+        "id" : "5",
+        "name": "colorectal surgery        ",
+        "discription": "Dedicated surgical specialists treating cancers and conditions related to the lower gastrointestinal tract and the abdominal cavity and state-of-the-art facilities.",
+        "img": "https://www.gppconline.com/images/GeneralSurgery.jpg"
+    
+    },
+    {
+        "id" : "6",
+        "name": "gastroenterology        ",
+        "discription": "It is worrisome when you experience stomach pain, or your digestive tract is not functioning well. With compassion and care, we diagnose and treat disorders.",
+        "img": "https://www.gppconline.com/images/Gastroenterology.jpg"
+    
+    },
+    {
+        "id" : "7",
+        "name": "gastroenterology        ",
+        "discription": "It is worrisome when you experience stomach pain, or your digestive tract is not functioning well. With compassion and care, we diagnose and treat disorders.",
+        "img": "https://www.gppconline.com/images/Gastroenterology.jpg"
+    
+    },
+    {
+        "id" : "8",
+        "name": "orthopedics",
+        "discription": "Sudden or chronic pain and injury can bring your life to a halt. Our experienced orthopedic surgeons cover a range of conditions - hand and upper extremity, knee and hip.",
+        "img": "https://www.gppconline.com/images/orthopaedicSurgery.jpg"
+    
+    },
+    {
+        "id" : "9",
+        "name": "pulmonary services",
+        "discription": "When you or a loved one has breathing issues, you want to be sure you are seeing the right team of professionals dedicated to helping you breathe easier.",
+        "img": "https://www.gppconline.com/images/Pulmary_Services.jpg"
+    
+    }
+
+]
