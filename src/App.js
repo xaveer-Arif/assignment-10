@@ -11,6 +11,7 @@ import ServiceDetails from "./Pages/Home/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./Pages/PrivateRouter/PrivateRouter";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Departments from "./Pages/Departments/Departments";
+import About from "./Pages/About/About";
 
 function App() {
   return (
@@ -36,6 +37,9 @@ function App() {
           <Route path = '/login'> 
             <Login></Login>
           </Route>
+          <PrivateRoute path = '/about'> 
+            <About></About>
+          </PrivateRoute>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

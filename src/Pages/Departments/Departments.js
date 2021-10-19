@@ -56,6 +56,7 @@ const Departments = () => {
                 }
             </Row>
         </div>
+       
         </div>
     );
 };

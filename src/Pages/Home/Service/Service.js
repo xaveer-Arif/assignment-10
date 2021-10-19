@@ -20,7 +20,7 @@ const Service = (props) => {
               </Card.Text>
               
               <Link to = {`details/${id}`}>
-              <button  className = 'btn btn-danger'>Add to cart</button>
+              <button  className = 'btn btn-danger'>Details</button>
               </Link> 
              
               {/* <button onClick = {() => serviceHandler(service)} className = 'btn btn-danger'>Add to cart</button> 
