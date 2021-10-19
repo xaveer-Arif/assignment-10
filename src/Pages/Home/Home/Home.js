@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUs from "../../ContactUs/ContactUs";
 import Header from "../../Shared/Header/Header";
 import Banner from "../Banner/Banner";
 import Service from "../Service/Service";
@@ -15,7 +16,9 @@ const Home = () => {
       <h1 className="text-center mb-5 mt-5">Treading</h1>
       <Treading></Treading>
       {/* <Service></Service> */}
-      
+      <h1 className="text-center mb-5 mt-5">Contact Us</h1>
+      <ContactUs></ContactUs>
+
     </div>
   );
 };
