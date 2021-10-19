@@ -12,6 +12,10 @@ import PrivateRoute from "./Pages/PrivateRouter/PrivateRouter";
 import Footer from "./Pages/Shared/Footer/Footer";
 import Departments from "./Pages/Departments/Departments";
 import About from "./Pages/About/About";
+import Register from "./Pages/Register/Register";
+import Button from "@restart/ui/esm/Button";
+import NotFound from "./Pages/NotFound/NotFound";
+import Services from "./Pages/Home/Services/Services";
 
 function App() {
   return (
@@ -29,6 +33,9 @@ function App() {
           <PrivateRoute path = '/departments'> 
             <Departments></Departments>
           </PrivateRoute>
+          <PrivateRoute path = '/services'> 
+            <Services></Services>
+          </PrivateRoute>
           <PrivateRoute path = '/details/:serviceId'> 
             <ServiceDetails></ServiceDetails>
           </PrivateRoute>
@@ -37,9 +44,15 @@ function App() {
           <Route path = '/login'> 
             <Login></Login>
           </Route>
+          <Route path = '/register'> 
+            <Register></Register>
+          </Route>
           <PrivateRoute path = '/about'> 
             <About></About>
           </PrivateRoute>
+          <Route path = '*'> 
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer></Footer>
       </BrowserRouter>

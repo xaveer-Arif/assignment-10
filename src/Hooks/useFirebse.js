@@ -1,6 +1,6 @@
 import initializeAuthentication from '../Pages/Firebse/Firebase.init';
 
-import {getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged} from 'firebase/auth'
+import {getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from 'firebase/auth'
 import { useState , useEffect } from "react";
 
 initializeAuthentication();
@@ -17,7 +17,8 @@ const useFirebase = () => {
         return signInWithPopup(auth, provider)
         .finally(() => setIsLoading(false))
     }
-
+    // email and password
+   
 
     // log out
     const logOut = () => {

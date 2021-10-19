@@ -1,14 +1,16 @@
 import React, { useEffect,useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router';
-import useAuth from '../../Hooks/useAuth';
+import './Register.css'
 import useFirebase from '../../Hooks/useFirebse';
-import { getAuth, signInWithEmailAndPassword  } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , sendEmailVerification, updateProfile  } from "firebase/auth";
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
+import { Form , Button} from 'react-bootstrap';
 
 
 
-const Login = () => {
+const Register = () => {
   const {googleSignIn} = useAuth()
     const location = useLocation();
     const history = useHistory()
@@ -30,17 +32,37 @@ const Login = () => {
     const auth = getAuth();
 
     const onSubmit = data => {
-        const {email, password} = data;
-       
-        signInWithEmailAndPassword(auth, email, password)
+        const {email, password, name} = data;
+        console.log(name)
+        if(password.length < 6){
+            setError('password at least 6 charecter')
+            return 
+        }
+        createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
             console.log(result.user)
-        })
+            emailVerify()
+            updateName()
+        }) 
+        
         .catch(error => {
             setError(error.message)
         })
+    //   / update 
+   const updateName = () => {
+        updateProfile (auth.currentUser, {displayName:name})
+        .then(result => {})
+    }
     };
-
+     
+   
+    // verify email
+    const emailVerify = () => {
+        sendEmailVerification(auth.currentUser)
+        .then((result)=> {
+            console.log(result)
+        })
+    }
   
 
 //   .then((userCredential) => {
@@ -56,31 +78,41 @@ const Login = () => {
   
     return (
         <div>
-            <h1>Log in</h1>
+            <h1>Register</h1>
             <h5>{error}</h5>
             <form onSubmit={handleSubmit(onSubmit)}>
             
-      <input  {...register("email",{required:true}) }/>
+      <input className = 'input-field'  {...register("name",{required:true}) }/>
+      <br />
+      {errors.name && <span>This field is required</span>}
+      <br />
+      <input className = 'input-field'  {...register("email",{required:true}) }/>
       <br />
       {/* <input defaultValue="test" {...register("example")} />
       <br /> */}
       {errors.email && <span>This field is required</span>}
       <br />
-      <input type = 'password' {...register("password", { required: true })} />
+      <input className = 'input-field' type = 'password' {...register("password", { required: true })} />
       <br />
       {errors.password && <span>This field is required</span>}
       
       <br />
-      <input onClick ={handlerSingIn} type="submit" />
+      <input onClick = {handlerSingIn} type="submit" />
       {/* google sign in */}
-       <button 
+       
+    </form>
+
+{/*  */}
+
+
+{/*  */}
+    <button 
        className = "btn btn-warning"
        onClick = {handlerSingIn}
        >Google SignIn</button>
-    </form>
-    <p>New User?{<Link to = '/register'>Register Now</Link>}</p>
+    <p>Already Sign In?{<Link to = '/login'>Log In</Link>}</p>
         </div>
     );
 };
 
-export default Login;
+export default Register;
