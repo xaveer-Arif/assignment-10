@@ -1,0 +1,50 @@
+[
+    {
+        "id": "1",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/06/Depositphotos_24648537_original-400x400.jpg",
+        "name": "Cardiology",
+        "details": "Here's the story of a lovely lady, who was bringing up three very lovely..."
+    },
+    {
+        "id": "2",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2015/02/Depositphotos_5711983_original-400x400.jpg",
+        "name": "Dental",
+        "details": "We never thought of findin' a place where we belong. Don't have to stand"
+    },
+    {
+        "id": "3",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/03/Depositphotos_42539851_department.jpg",
+        "name": "Neurologist",
+        "details": "You unlock this door with the key of imagination. Beyond it is another dimension:..."
+    },
+    {
+        "id": "4",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/06/Depositphotos_11882261_original-400x400.jpg",
+        "name": "Pediatric",
+        "details": "One thousand years ago, superstition and the sword ruled. It was a time of..."
+    },
+    {
+        "id": "5",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/03/Depositphotos_10069934_original-400x400.jpg",
+        "name": "Pulmonary",
+        "details": "Life is like a hurricane here in Duckburg. Race cars, lasers, aeroplanes - it's..."
+    },
+    {
+        "id": "6",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/03/Depositphotos_11295039_original-400x400.jpg",
+        "name": "Traumatology",
+        "details": "Your tread must be light and sure, as though your path were upon rice.."
+    },
+    {
+        "id": "7",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/03/Depositphotos_42548065_original-400x400.jpg",
+        "name": "Urology",
+        "details": "They're creepy and they're kooky, mysterious and spooky. They're all together ooky."
+    },
+    {
+        "id": "8",
+        "img": "http://demo2.themewarrior.com/hospitalplus/wp-content/uploads/sites/22/2016/03/Depositphotos_80150830_original-400x400.jpg",
+        "name": "Xray",
+        "details": "One thousand years ago, superstition and the sword ruled. It was a time of darkness. It.."
+    }
+]

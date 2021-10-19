@@ -1,0 +1,19 @@
+.department{
+    overflow-x: hidden;
+}
+.dep-banner{
+    padding: 0;
+}
+.dep-bg{
+    background-color: #1562af;
+    padding: 15px 25px;
+}
+/* hospital-department  */
+.hospital-dep{
+    padding: 80px 0;
+}
+.hospital-dep hr{
+    color: red;
+    font-weight: 100;
+    width: 10%;
+}
