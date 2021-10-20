@@ -15,13 +15,6 @@ const Department = ({department}) => {
               <Card.Text>
                {details}
               </Card.Text>
-              
-              {/* <Link to = {`details/${id}`}>
-              <button  className = 'btn btn-danger'>Add to cart</button>
-              </Link>  */}
-             
-              {/* <button onClick = {() => serviceHandler(service)} className = 'btn btn-danger'>Add to cart</button> 
-              */}
             </Card.Body>
           </Card>
         </Col>

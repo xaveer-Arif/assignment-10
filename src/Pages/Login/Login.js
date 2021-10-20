@@ -1,9 +1,9 @@
-import React, { useEffect,useState } from 'react';
+import React, {useState } from 'react';
 import './Login.css'
 import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
-import useFirebase from '../../Hooks/useFirebse';
+
 import { getAuth, signInWithEmailAndPassword  } from "firebase/auth";
 import { Link } from 'react-router-dom';
 
@@ -24,6 +24,10 @@ const Login = () => {
             setError({})
             history.push(redirect_url)
         })
+        .catch(error => {
+            setError(error.message)
+        })
+
     }
   
   // react hook form
@@ -47,17 +51,6 @@ const Login = () => {
 
   
 
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // ..
-//   });
-  
     return (
         <div  className = 'form-container'>
         <div className="form-style">
@@ -67,8 +60,7 @@ const Login = () => {
             
       <input  className = 'input-field ' placeholder =" email"  {...register("email",{required:true}) }/>
       <br />
-      {/* <input defaultValue="test" {...register("example")} />
-      <br /> */}
+     
       {errors.email && <span className= 'error'>This field is required</span>}
       <br />
       <input  className = 'input-field'  placeholder = " password" type = 'password' {...register("password", { required: true })} />

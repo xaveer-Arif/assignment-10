@@ -22,8 +22,8 @@ const ServiceDetails = () => {
 
         <div>
             
-            
-           <Col>
+            <Row>
+           <Col md= {6} >
           <Card>
             <Card.Img variant="top" src={service?.img} />
             <Card.Body>
@@ -32,7 +32,7 @@ const ServiceDetails = () => {
                {service?.discription}
               </Card.Text>
               
-               <button  className = 'btn btn-danger'>Add to cart</button>
+               <button  className = 'btn btn-danger'>Details</button>
               
              
               {/* <button onClick = {() => serviceHandler(service)} className = 'btn btn-danger'>Add to cart</button> 
@@ -40,6 +40,7 @@ const ServiceDetails = () => {
             </Card.Body>
           </Card>
         </Col>
+        </Row>
         </div>
     );
 };

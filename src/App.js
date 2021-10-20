@@ -1,9 +1,7 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home/Home/Home";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Service from "./Pages/Home/Service/Service";
 import Login from "./Pages/Login/Login";
 import Header from "./Pages/Shared/Header/Header";
 import AuthProvider from "./Context/AuthProvider";

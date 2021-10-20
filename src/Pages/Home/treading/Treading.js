@@ -51,27 +51,6 @@ const Treading = () => {
                 </Card>
                 </Col>
                
-                {/* </Col>
-                <Col sm= {6} md= {3} className = ''>
-                <Card className = 'card-hover'>
-                    <Card.Body className = 'pb-4'>
-                    <Card.Title> <h1>4</h1> </Card.Title>
-                    <Card.Text>
-                               <h5 className = 'card-text'>Failure to Communicate 'Doc-to-Doc' Blamed for Patient's Deat</h5>
-                            </Card.Text>
-                        </Card.Body>
-                </Card>
-                </Col> */}
-                {/* <Col sm= {4} md= {2}>
-                <Card>
-                    <Card.Body>
-                    <Card.Title> <h1>4</h1> </Card.Title>
-                    <Card.Text>
-                               <h4 className = 'text-dark'>Failure to Communicate 'Doc-to-Doc' Blamed for Patient's Deat</h4>
-                            </Card.Text>
-                        </Card.Body>
-                </Card>
-                </Col> */}
             </Row>
            
         </div>

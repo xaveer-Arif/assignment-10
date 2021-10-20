@@ -1,0 +1,6 @@
+.card-hover:hover{
+    color: red;
+    transform:translateY(10px);
+    transition: .5s ease-out;
+    
+}

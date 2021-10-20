@@ -37,7 +37,6 @@ const Register = () => {
 
     const onSubmit = data => {
         const {email, password, name} = data;
-        // console.log(name)
         if(password.length < 6){
             setError('password at least 6 charecter')
             return 
@@ -51,13 +50,7 @@ const Register = () => {
             emailVerify()
             updateName()
         }) 
-        
-       
-    
-        
-        // .catch(error => {
-        //     setError(error.message)
-        // })
+  
     //   / update 
    const updateName = () => {
         updateProfile (auth.currentUser, {displayName:name})
@@ -74,17 +67,6 @@ const Register = () => {
         })
     }
    
-
-//   .then((userCredential) => {
-//     // Signed in 
-//     const user = userCredential.user;
-//     // ...
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     // ..
-//   });
   
     return (
         <div className = 'form-container'>
@@ -92,7 +74,6 @@ const Register = () => {
             <h1 className = 'pb-3'>Register</h1>
             <h5  className= 'error'>{error}</h5>
             <form onSubmit={handleSubmit(onSubmit)}>
-            {/* <label>Name:</label> */}
       <input className = 'input-field ' placeholder = ' name'  {...register("name",{required:true}) }/>
       <br />
       {errors.name && <span className= 'error'>This field is required</span>}
@@ -100,8 +81,7 @@ const Register = () => {
      
       <input className = 'input-field' placeholder = " email"  {...register("email",{required:true}) }/>
       <br />
-      {/* <input defaultValue="test" {...register("example")} />
-      <br /> */}
+     
       {errors.email && <span className= 'error'>This field is required</span>}
       <br />
       

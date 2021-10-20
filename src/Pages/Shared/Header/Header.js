@@ -32,7 +32,6 @@ const Header = () => {
       }
       {user.displayName && <Nav.Link>{user.displayName}</Nav.Link>}
       
-      {/* {user?.reloadUserInfo?.photoUrl ?  <Nav.Link><Image className = 'w-25' src={user?.reloadUserInfo?.photoUrl} alt="" roundedCircle  /></Nav.Link> : <Nav.Link><Image className = 'w-img p-0' src='https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png' alt="" roundedCircle  /></Nav.Link>} */}
       {user.displayName && <Nav.Link><Image className = 'w-25' src={user?.reloadUserInfo?.photoUrl} alt="" roundedCircle  /></Nav.Link>}
       
     </Nav>

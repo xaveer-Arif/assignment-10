@@ -2,9 +2,7 @@ import React from 'react';
 import { Col, Row } from 'react-bootstrap';
 import './Footer.css'
 import logo from '../../../image/mscp-logo.webp'
-// import { faCoffee, faFacebookF   } from '@fortawesome/free-solid-svg-icons'
-// import { f2c6 } from "@fortawesome/free-brands-svg-icons"
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 
 const Footer = () => {
