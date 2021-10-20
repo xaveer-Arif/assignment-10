@@ -11,9 +11,7 @@ const Doctor = () => {
                 
             <h2> Eric J. Topol, MD</h2>
             <h5>Medscape Editor-in-Chief</h5>
-            <p>Director, Scripps Translational Science Institute; Executive Vice President and Professor of Molecular Medicine, The Scripps Research Institute; Senior Consultant, Division of Cardiovascular Diseases, Scripps Clinic, La Jolla, California; Editor-in-Chief, Medscape
-
-            </p>
+            <p>Director, Scripps Translational Science Institute; Executive Vice President and Professor of Molecular Medicine, The Scripps Research Institute; Senior Consultant, Division of Cardiovascular Diseases, Scripps Clinic, La Jolla, California; Editor-in-Chief, </p>
         </div>
         </div>
     );

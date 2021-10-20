@@ -6,8 +6,7 @@ import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
   const {user, logOut} = useAuth();
-  console.log("user" ,user.displayName)
-  console.log(user?.reloadUserInfo?.photoUrl)
+
   return (
 
 
