@@ -5,8 +5,8 @@ import './Doctor.css'
 const Doctor = () => {
     return (
         <div className = 'treading pb-5'>
-            <h1 className = 'text-start ms-5'> Editor-in-Chief</h1>
-            <div className = 'bg-white' >
+            <h1 className = 'text-start ms-5 p-3'> Editor-in-Chief</h1>
+            <div className = 'bg-white pt-5 pb-5' >
                 <Image className = '' src="https://img.medscapestatic.com/pi/global/hs/hs-topol-eric-140x160.jpg"  alt="" roundedCircle/>
                 
                     <h2> Eric J. Topol, MD</h2>

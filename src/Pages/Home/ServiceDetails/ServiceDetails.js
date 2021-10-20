@@ -9,7 +9,6 @@ const ServiceDetails = () => {
     const [services, setServices] = useState([])
     const [service, setService] = useState([])
    useEffect(() => {
-    //    const url = `https://jsonplaceholder.typicode.com/users/${serviceId}`
        fetch("/services.json")
        .then(response => response.json())
        .then(data => setServices(data))

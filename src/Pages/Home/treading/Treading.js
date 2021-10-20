@@ -8,7 +8,7 @@ const Treading = () => {
         <div className ='treading '>
        
 
-            <h1 className="text-start ms-5 mb-3 mt-5">Treading</h1> 
+            <h1 className="text-start ms-5 mb-3 mt-5 p-4">Treading</h1> 
             <Row className = 'pb-5 g-3 ms-5 me-5'>
                 <Col sm= {6} md= {3}>
                 <Card className = 'card-hover'>
