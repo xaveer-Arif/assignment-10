@@ -1,4 +1,5 @@
 import React, { useEffect,useState } from 'react';
+import './Login.css'
 import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../Hooks/useAuth';
@@ -20,6 +21,7 @@ const Login = () => {
     const handlerSingIn = () => {
         googleSignIn()
         .then(resutt => {
+            setError({})
             history.push(redirect_url)
         })
     }
@@ -34,7 +36,9 @@ const Login = () => {
        
         signInWithEmailAndPassword(auth, email, password)
         .then(result => {
+            history.push(redirect_url)
             console.log(result.user)
+            setError({})
         })
         .catch(error => {
             setError(error.message)
@@ -55,30 +59,33 @@ const Login = () => {
 //   });
   
     return (
-        <div>
-            <h1>Log in</h1>
-            <h5>{error}</h5>
+        <div  className = 'form-container'>
+        <div className="form-style">
+            <h1 className = 'pb-3'>Log in</h1>
+            <h5  className= 'error'>{error}</h5>
             <form onSubmit={handleSubmit(onSubmit)}>
             
-      <input  {...register("email",{required:true}) }/>
+      <input  className = 'input-field ' placeholder =" email"  {...register("email",{required:true}) }/>
       <br />
       {/* <input defaultValue="test" {...register("example")} />
       <br /> */}
-      {errors.email && <span>This field is required</span>}
+      {errors.email && <span className= 'error'>This field is required</span>}
       <br />
-      <input type = 'password' {...register("password", { required: true })} />
+      <input  className = 'input-field'  placeholder = " password" type = 'password' {...register("password", { required: true })} />
       <br />
-      {errors.password && <span>This field is required</span>}
+      {errors.password && <span  className= 'error'>This field is required</span>}
       
       <br />
-      <input onClick ={handlerSingIn} type="submit" />
+      <input  className = "signIn-btn btn btn-danger" type="submit" />
       {/* google sign in */}
        <button 
        className = "btn btn-warning"
        onClick = {handlerSingIn}
        >Google SignIn</button>
     </form>
-    <p>New User?{<Link to = '/register'>Register Now</Link>}</p>
+    <hr />
+    <p className = 'text-dark'>New User?{<Link to = '/register'>Register Now</Link>}</p>
+        </div>
         </div>
     );
 };

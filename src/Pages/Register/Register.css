@@ -2,6 +2,11 @@
     width: 100%px;
     padding-top: 5px;
     border-radius: 5px;
+    padding-right: 100px;
+    border: 2px solid white;
+}
+.form{
+    width: 500px;
 }
 .form-container{
     background: rgb(233, 224, 224);
@@ -10,4 +15,13 @@
 .form-style{
     padding-top: 50px;
     padding-bottom: 50px;
+}
+.error{
+    color: red;
+
+}
+.signIn-btn{
+    padding: 5px 20px;
+    margin-right: 50px;
+    border-radius: 5px;
 }

@@ -24,6 +24,10 @@ const Register = () => {
         .then(resutt => {
             history.push(redirect_url)
         })
+        .catch(error => {
+            
+        })
+
     }
   
   // react hook form
@@ -85,39 +89,38 @@ const Register = () => {
     return (
         <div className = 'form-container'>
         <div className="form-style">
-            <h1>Register</h1>
-            <h5>{error}</h5>
+            <h1 className = 'pb-3'>Register</h1>
+            <h5  className= 'error'>{error}</h5>
             <form onSubmit={handleSubmit(onSubmit)}>
-            
-      <input className = 'input-field'  {...register("name",{required:true}) }/>
+            {/* <label>Name:</label> */}
+      <input className = 'input-field ' placeholder = ' name'  {...register("name",{required:true}) }/>
       <br />
-      {errors.name && <span>This field is required</span>}
+      {errors.name && <span className= 'error'>This field is required</span>}
       <br />
-      <input className = 'input-field'  {...register("email",{required:true}) }/>
+     
+      <input className = 'input-field' placeholder = " email"  {...register("email",{required:true}) }/>
       <br />
       {/* <input defaultValue="test" {...register("example")} />
       <br /> */}
-      {errors.email && <span>This field is required</span>}
+      {errors.email && <span className= 'error'>This field is required</span>}
       <br />
-      <input className = 'input-field' type = 'password' {...register("password", { required: true })} />
+      
+      <input className = 'input-field' placeholder = " password" type = 'password' {...register("password", { required: true })} />
       <br />
-      {errors.password && <span>This field is required</span>}
+      {errors.password && <span  className= 'error'>This field is required</span>}
       
       <br />
-      <input  type="submit" />
+      <button className = "signIn-btn btn btn-danger">SignUp</button>
       {/* google sign in */}
-       
-    </form>
-
-{/*  */}
-
-
-{/*  */}
-    <button 
+       <button 
        className = "btn btn-warning"
        onClick = {handlerSingIn}
        >Google SignIn</button>
-    <p>Already Sign In?{<Link to = '/login'>Log In</Link>}</p>
+    </form>
+
+<hr/>
+    
+    <p className = 'text-dark'>Already Sign In?{<Link to = '/login'> Log In</Link>}</p>
         </div>
         </div>
     );

@@ -10,19 +10,18 @@ import logo from '../../../image/mscp-logo.webp'
 const Footer = () => {
     return (
 
-        <div className = 'footer'>
-        <hr />
+        <div className = 'footer pt-5'>
             <div className = ''>
                 
             <Row>
                 
-                <Col sm = {3} className = ' ms-5 text-start' >
-                     <img className = 'mb-3 footer-logo ' src={logo} alt="" />
+                <Col xm = {2} md = {3} className = ' ms-5 text-start' >
+                     <img className = 'mb-3 footer-logo img-fluid' src={logo} alt="" />
                     <h5 className ='mb-3'>FIND US ON</h5>
                     
                 </Col>
                
-                <Col sm = {2} className = 'footer-border text-start'>
+                <Col xm = {1} md = {2} className = 'footer-border text-start'>
                     <h5>About</h5>
                     <ul >
                         <li>About Medscape</li>
@@ -34,7 +33,7 @@ const Footer = () => {
                         <li>Help Center</li>
                     </ul>
                 </Col>
-                <Col sm = {2} className = 'footer-border text-start'>
+                <Col xm = {1} md = {2} className = 'footer-border text-start'>
                     <h5>MEMBERSHIP</h5>
 
                     <ul>
@@ -44,7 +43,7 @@ const Footer = () => {
                         <li>Newsletters & Alerts</li>
                     </ul>
                 </Col>
-                <Col sm = {2} className =  'footer-border text-start'>
+                <Col xm = {1} md = {2}  className =  'footer-border text-start'>
                     <h5>APPS</h5>
                     <ul>
                         <li>Medscape</li>
@@ -52,7 +51,7 @@ const Footer = () => {
                      
                     </ul>
                 </Col>
-                <Col sm = {2} className = 'footer-border text-start'>
+                <Col xm = {1} md  = {2} className = 'footer-border text-start'>
                     <h5>WEBMD NETWORK</h5>
                     <ul>
                         <li>Medscape Live Events</li>
