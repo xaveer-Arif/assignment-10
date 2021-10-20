@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useHistory, useLocation } from 'react-router';
 import './Register.css'
 import useFirebase from '../../Hooks/useFirebse';
-import { getAuth, createUserWithEmailAndPassword , sendEmailVerification, updateProfile  } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword , sendEmailVerification, updateProfile, onAuthStateChanged  } from "firebase/auth";
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import { Form , Button} from 'react-bootstrap';
@@ -11,7 +11,7 @@ import { Form , Button} from 'react-bootstrap';
 
 
 const Register = () => {
-  const {googleSignIn} = useAuth()
+  const {googleSignIn,user, setUser} = useAuth()
     const location = useLocation();
     const history = useHistory()
 
@@ -33,21 +33,27 @@ const Register = () => {
 
     const onSubmit = data => {
         const {email, password, name} = data;
-        console.log(name)
+        // console.log(name)
         if(password.length < 6){
             setError('password at least 6 charecter')
             return 
         }
-        createUserWithEmailAndPassword(auth, email, password)
+       
+            createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
-            console.log(result.user)
+            history.push(redirect_url)
+            setUser(result.user)
+            
             emailVerify()
             updateName()
         }) 
         
-        .catch(error => {
-            setError(error.message)
-        })
+       
+    
+        
+        // .catch(error => {
+        //     setError(error.message)
+        // })
     //   / update 
    const updateName = () => {
         updateProfile (auth.currentUser, {displayName:name})
@@ -63,7 +69,7 @@ const Register = () => {
             console.log(result)
         })
     }
-  
+   
 
 //   .then((userCredential) => {
 //     // Signed in 
@@ -97,7 +103,7 @@ const Register = () => {
       {errors.password && <span>This field is required</span>}
       
       <br />
-      <input onClick = {handlerSingIn} type="submit" />
+      <input  type="submit" />
       {/* google sign in */}
        
     </form>
