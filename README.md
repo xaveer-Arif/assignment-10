@@ -5,7 +5,7 @@
 ### Deployment
 
 <!-- Netlify live link: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment) -->
- live link: [https://medscape-6af7d.web.app/login](https://medscape-6af7d.web.app/login)
+ live link: [https://medscape-6af7d.web.app](https://medscape-6af7d.web.app)
 
 ## Available Scripts
 
