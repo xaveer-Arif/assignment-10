@@ -11,7 +11,7 @@ import { Form , Button} from 'react-bootstrap';
 
 
 const Register = () => {
-  const {googleSignIn,user, setUser} = useAuth()
+  const {googleSignIn, user, setUser} = useAuth()
     const location = useLocation();
     const history = useHistory()
 
@@ -42,23 +42,31 @@ const Register = () => {
             return 
         }
        
-            createUserWithEmailAndPassword(auth, email, password)
+        createUserWithEmailAndPassword(auth, email, password)
         .then(result => {
             history.push(redirect_url)
+            updateName(name)
             setUser(result.user)
             
             emailVerify()
-            updateName()
+            
         }) 
-  
-    //   / update 
+//       / update 
    const updateName = () => {
         updateProfile (auth.currentUser, {displayName:name})
         .then(result => {})
     }
     };
      
-   
+    // on auth change 
+    useEffect(() => {
+        onAuthStateChanged(auth , user => {
+            if(user){
+                setUser(user)
+            }
+        })
+        
+    },[])
     // verify email
     const emailVerify = () => {
         sendEmailVerification(auth.currentUser)

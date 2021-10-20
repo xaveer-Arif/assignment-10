@@ -6,13 +6,14 @@ import useAuth from "../../../Hooks/useAuth";
 
 const Header = () => {
   const {user, logOut} = useAuth();
-  console.log("user" ,user)
+  console.log("user" ,user.displayName)
   console.log(user?.reloadUserInfo?.photoUrl)
   return (
 
 
 
     <div className = 'responsive-nav '>
+      
     
       <Navbar  collapseOnSelect expand="lg" bg="dark" variant="dark">
 
@@ -30,7 +31,7 @@ const Header = () => {
         user.email ? <Nav.Link as = {Link} to="/" onClick = {logOut} >Log Out</Nav.Link> : <Nav.Link  as = {Link} to="/login" className = 'me-2'>Log in</Nav.Link>
         
       }
-      {user.displayName && <Nav.Link>{user.displayName}</Nav.Link>}
+      {user?.email && <Nav.Link>{user?.displayName}</Nav.Link>}
       
       {user.displayName && <Nav.Link><Image className = 'w-25' src={user?.reloadUserInfo?.photoUrl} alt="" roundedCircle  /></Nav.Link>}
       
