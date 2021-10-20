@@ -11,5 +11,5 @@
 
 You can:
 <li>I use Router </li>
-<li>I use 5 menu bar</li>
-<li>I use a PrivateRoute</li>
+<li>Make website Responsive</li>
+<li>useing context</li>

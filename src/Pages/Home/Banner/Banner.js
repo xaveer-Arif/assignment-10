@@ -1,8 +1,10 @@
 import React from "react";
+import './Banner.css'
 import { Carousel } from "react-bootstrap";
 import banner1 from '../../../image/banner-img/5075916.png'
-import banner2 from '../../../image/banner-img/banner.jpg'
-import banner3 from '../../../image/banner-img/young-handsome-physician-medical-robe-with-stethoscope (1).jpg'
+import banner2 from '../../../image/banner-img/5272872.png'
+// import banner3 from '../../../image/banner-img/5075916.png'
+
 
 const Banner = () => {
   return (
@@ -10,30 +12,30 @@ const Banner = () => {
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block banner-size w-100"
             src={banner1}
             alt="First slide"
           />
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>First slide label</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block banner-size w-100"
             src={banner2}
             alt="Second slide"
           />
 
-          <Carousel.Caption>
+          {/* <Carousel.Caption>
             <h3>Second slide label</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
+          </Carousel.Caption> */}
         </Carousel.Item>
-        <Carousel.Item>
+        {/* <Carousel.Item>
           <img
-            className="d-block w-100"
+            className="d-block banner-size w-100"
             src={banner3}
             alt="Third slide"
           />
@@ -44,7 +46,7 @@ const Banner = () => {
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>
           </Carousel.Caption>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
     </div>
   );

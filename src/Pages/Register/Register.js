@@ -83,7 +83,8 @@ const Register = () => {
 //   });
   
     return (
-        <div>
+        <div className = 'form-container'>
+        <div className="form-style">
             <h1>Register</h1>
             <h5>{error}</h5>
             <form onSubmit={handleSubmit(onSubmit)}>
@@ -117,6 +118,7 @@ const Register = () => {
        onClick = {handlerSingIn}
        >Google SignIn</button>
     <p>Already Sign In?{<Link to = '/login'>Log In</Link>}</p>
+        </div>
         </div>
     );
 };

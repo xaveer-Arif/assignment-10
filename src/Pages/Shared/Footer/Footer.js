@@ -11,7 +11,7 @@ const Footer = () => {
     return (
 
         <div className = 'footer'>
-            <hr  />
+        <hr />
             <div className = ''>
                 
             <Row>
