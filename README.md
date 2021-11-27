@@ -14,5 +14,4 @@ You can:
  using react, firebase etc. 
 </li>
 <li>Un-registered user can`t buy services</li>
-<li>useing context</li>
 <li>User can log in vai email-password  or google</li>
