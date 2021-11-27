@@ -10,6 +10,9 @@
 ## Available Scripts
 
 You can:
-<li>I use Router </li>
-<li>Make website Responsive</li>
+<li>Med scape is a health care related website.
+ using react, firebase etc. 
+</li>
+<li>Un-registered user can`t buy services</li>
 <li>useing context</li>
+<li>User can log in vai email-password  or google</li>
